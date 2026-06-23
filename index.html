@@ -32,7 +32,7 @@
 <body>
 
 <h1>TenderWatch UK — Privacy Policy</h1>
-<div class="updated">Last updated: <strong>20 June 2026</strong></div>
+<div class="updated">Last updated: <strong>22 June 2026</strong></div>
 
 <p>
 TenderWatch UK is a Chrome extension that helps users monitor UK Contracts
@@ -40,22 +40,41 @@ Finder and Find a Tender for public sector tender opportunities matching
 their own keywords.
 </p>
 
-<h2>What data TenderWatch UK stores</h2>
-<p>Stored only in your own browser's local storage, never on any server operated by the developer:</p>
+<h2>What data is stored only in your browser</h2>
+<p>Stored in your browser's local storage, never transmitted anywhere except as described below:</p>
 <ul>
   <li>Your watch keyword(s)</li>
   <li>Your Anthropic API key (only if you use the AI Summary feature)</li>
   <li>A list of tender IDs you've already seen (to avoid duplicate notifications)</li>
-  <li>Your Pro license key (if purchased)</li>
+  <li>The email you entered to subscribe or check your Pro status</li>
 </ul>
 
-<h2>What data is sent, and to whom</h2>
+<h2>What data is sent to our backend, and why</h2>
+<p>
+If you choose to subscribe to Pro or buy the one-time Founder license,
+<strong>your email address is sent to a small backend we operate</strong>
+(hosted on Render, with a Supabase database), so we can create a Stripe
+Checkout session for your purchase, and record whether your subscription
+is currently active so the extension can check your Pro status.
+</p>
+<p>
+This backend stores: your email address, which plan you're on, and whether
+your subscription is active or cancelled. <strong>It does not store your
+card details or any payment information — that is handled entirely by
+Stripe</strong>, which is PCI-compliant and never shares full card numbers
+with us or with this backend.
+</p>
+
+<h2>What data is sent to other third parties</h2>
 <ul>
   <li><strong>To UK Contracts Finder &amp; Find a Tender's public APIs:</strong> your keyword is used only to filter results locally, after fetching publicly available tender data. No account or personal identifier is sent — these endpoints require no authentication.</li>
   <li><strong>To Anthropic's API:</strong> only if you click "AI Summary," the tender description text and your own API key, sent directly from your browser.</li>
-  <li><strong>To Payhip's API:</strong> only your license key, for verification.</li>
+  <li><strong>To Stripe:</strong> your email and payment details, only when you choose to subscribe or purchase.</li>
 </ul>
-<p>No analytics, tracking, or advertising services are used. The developer has no server or database that receives or stores any of your data.</p>
+<p>No analytics, tracking, or advertising services are used anywhere in this extension or its backend.</p>
+
+<h2>Data retention and deletion</h2>
+<p>Your locally-stored data can be cleared at any time by removing the extension. To request deletion of your email and subscription record from our backend, contact us at the address below.</p>
 
 <h2>Disclaimer</h2>
 <div class="disclaimer">
@@ -69,7 +88,6 @@ their own keywords.
 </div>
 
 <h2>Contact</h2>
-<!-- Contact email updated -->
 <p>Questions about this policy can be sent to: <a href="mailto:tenderwatchuk@proton.me">tenderwatchuk@proton.me</a></p>
 
 <div class="footer">TenderWatch UK Privacy Policy</div>
