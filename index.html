@@ -3,214 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>TenderWatch UK — Privacy Policy</title>
-
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f5f7fa;
-    color: #222;
-    margin: 0;
-    padding: 40px 20px;
-    line-height: 1.7;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 50px;
-    border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-}
-
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.hero h1 {
-    margin: 0;
-    color: #0f172a;
-    font-size: 2.2rem;
-}
-
-.hero p {
-    color: #64748b;
-    margin-top: 10px;
-}
-
-.highlight {
-    background: #f8fafc;
-    border-left: 4px solid #2563eb;
-    padding: 18px 22px;
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 680px;
+    margin: 50px auto;
+    padding: 0 20px;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .updated { color: #777; font-size: 13px; margin-bottom: 30px; }
+  h2 { font-size: 16px; margin-top: 30px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .disclaimer {
+    background: #f0f9ff;
+    border-left: 4px solid #1d4ed8;
+    padding: 14px 16px;
     border-radius: 6px;
-    margin-bottom: 30px;
-}
-
-h2 {
-    color: #0f172a;
-    margin-top: 35px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-ul {
-    padding-left: 25px;
-}
-
-li {
-    margin-bottom: 12px;
-}
-
-a {
-    color: #2563eb;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #e2e8f0;
-    text-align: center;
-    color: #64748b;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 30px 24px;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-}
+    margin-top: 16px;
+  }
+  a { color: #1d4ed8; }
+  .footer { margin-top: 40px; font-size: 13px; color: #777; }
 </style>
 </head>
-
 <body>
 
-<div class="container">
-
-<div class="hero">
-    <h1>TenderWatch UK</h1>
-    <p>Privacy Policy • Last updated: 22 June 2026</p>
-</div>
-
-<div class="highlight">
-    TenderWatch UK is a Chrome extension that helps users monitor UK Contracts Finder and Find a Tender for public-sector tender opportunities matching their own keywords.
-</div>
-
-<h2>What data is stored locally in your browser</h2>
+<h1>TenderWatch UK — Privacy Policy</h1>
+<div class="updated">Last updated: <strong>30 June 2026</strong></div>
 
 <p>
-The following information is stored in your browser's local storage and is not transmitted anywhere except as described below:
+TenderWatch UK is a Chrome extension that helps users monitor UK Contracts
+Finder and Find a Tender for public sector tender opportunities matching
+their own keywords.
 </p>
 
+<h2>What data is stored only in your browser</h2>
+<p>Stored in your browser's local storage, never transmitted anywhere except as described below:</p>
 <ul>
-    <li>Your watch keyword(s)</li>
-    <li>Your Anthropic API key (only if you choose to use the AI Summary feature)</li>
-    <li>A list of tender IDs you have already seen (to avoid duplicate notifications)</li>
-    <li>The email address you entered to subscribe or check your Pro status</li>
+  <li>Your watch keyword(s)</li>
+  <li>Your Anthropic API key (only if you use the AI Summary feature)</li>
+  <li>A list of tender IDs you've already seen (to avoid duplicate notifications)</li>
+  <li>The email you entered to subscribe or check your Pro status</li>
 </ul>
 
 <h2>What data is sent to our backend, and why</h2>
-
 <p>
-If you choose to subscribe to Pro or purchase the one-time Founder License, your email address is sent to our backend, hosted on Render with a Supabase database.
+If you choose to subscribe to Pro or buy the one-time Founder license,
+<strong>your email address is sent to a small backend we operate</strong>
+(hosted on Render, with a Supabase database), so we can create a Stripe
+Checkout session for your purchase, and record whether your subscription
+is currently active so the extension can check your Pro status.
+</p>
+<p>
+This backend stores: your email address, which plan you're on, and whether
+your subscription is active or cancelled. <strong>It does not store your
+card details or any payment information — that is handled entirely by
+Stripe</strong>, which is PCI-compliant and never shares full card numbers
+with us or with this backend.
 </p>
 
-<p>
-This backend is used solely to:
-</p>
-
+<h2>What data is sent to other third parties</h2>
 <ul>
-    <li>Create Stripe Checkout sessions</li>
-    <li>Verify whether your subscription or Founder access is active</li>
-    <li>Enable the appropriate features inside the extension</li>
+  <li><strong>To UK Contracts Finder &amp; Find a Tender's public APIs:</strong> your keyword is used only to filter results locally, after fetching publicly available tender data. No account or personal identifier is sent — these endpoints require no authentication.</li>
+  <li><strong>To Anthropic's API:</strong> only if you click "AI Summary," the tender description text and your own API key, sent directly from your browser.</li>
+  <li><strong>To Stripe:</strong> your email and payment details, only when you choose to subscribe or purchase.</li>
 </ul>
-
-<p>
-The backend stores only:
-</p>
-
-<ul>
-    <li>Your email address</li>
-    <li>Your subscription plan (Free, Pro, or Founder)</li>
-    <li>Your subscription status (active, cancelled, past due, etc.)</li>
-</ul>
-
-<p>
-We do not store payment details, card numbers, banking information, or other sensitive financial data.
-</p>
-
-<h2>What data is sent to third parties</h2>
-
-<ul>
-
-<li>
-<strong>UK Contracts Finder & Find a Tender:</strong>
-Tender information is retrieved from publicly available government data sources. No personal information is sent to these services.
-</li>
-
-<li>
-<strong>Anthropic API:</strong>
-When you choose to generate an AI Summary, the tender description and your own Anthropic API key are sent directly from your browser to Anthropic. TenderWatch UK does not receive or store your API key.
-</li>
-
-<li>
-<strong>Stripe:</strong>
-If you purchase a subscription or Founder License, Stripe securely processes your payment information. We do not receive or store card numbers or other sensitive payment details. We receive only the information necessary to confirm payment status and manage access to paid features.
-</li>
-
-</ul>
-
-<p>
-No analytics, advertising networks, tracking pixels, user profiling systems, or third-party marketing services are used anywhere in this extension or its backend.
-</p>
+<p>No analytics, tracking, or advertising services are used anywhere in this extension or its backend.</p>
 
 <h2>Data retention and deletion</h2>
+<p>Your locally-stored data can be cleared at any time by removing the extension. To request deletion of your email and subscription record from our backend, contact us at the address below.</p>
 
+<h2>Billing, cancellation, and refunds</h2>
 <p>
-All locally stored data can be removed at any time by uninstalling the extension or clearing its storage.
+Pro subscriptions (monthly or yearly) can be cancelled at any time.
+Cancellation takes effect at the end of your current billing period. You
+retain access until that date. <strong>No refunds are provided for any unused portion of a billing period.</strong>
 </p>
-
 <p>
-To request deletion of your email address and subscription information from our backend systems, contact us using the email address below.
+The Founder plan is a one-time purchase and is <strong>non-refundable</strong>,
+except where required by applicable consumer protection law.
 </p>
 
 <h2>Disclaimer</h2>
-
-<p>
-TenderWatch UK is an independent tool and is not affiliated with, endorsed by, or officially connected to Crown Commercial Service, Contracts Finder, Find a Tender, or any UK government body.
-</p>
-
-<p>
-Information is provided for convenience only. Always verify tender details directly on the official government sources before making business decisions.
-</p>
-
-<p>
-AI-generated summaries may be incomplete, simplified, or inaccurate and should not replace reading the full tender notice.
-</p>
+<div class="disclaimer">
+  TenderWatch UK is an independent tool and is <strong>not affiliated with,
+  endorsed by, or officially connected to Crown Commercial Service,
+  Contracts Finder, Find a Tender, or any UK government body.</strong>
+  Information is provided for convenience only — always verify tender
+  details directly on the official sites before making business decisions.
+  AI-generated summaries may be incomplete or inaccurate and are not a
+  substitute for reading the full notice.
+</div>
 
 <h2>Contact</h2>
+<p>Questions about this policy can be sent to: <a href="mailto:tenderwatchuk@proton.me">tenderwatchuk@proton.me</a></p>
 
-<p>
-Questions about this policy can be sent to:
-<br><br>
-<a href="mailto:tenderwatchuk@proton.me">tenderwatchuk@proton.me</a>
-</p>
-
-<div class="footer">
-    TenderWatch UK Privacy Policy
-</div>
-
-</div>
+<div class="footer">TenderWatch UK Privacy Policy</div>
 
 </body>
 </html>
